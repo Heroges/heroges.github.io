@@ -15,7 +15,6 @@ const vuetify = new Vuetify()
 
 const app = new Vue({
 	el: "#root",
-	router,
 	vuetify: new Vuetify(),
 	data: {
 		sidebar_toggle: false,
