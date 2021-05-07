@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="assets/css/font-roboto.css" rel="stylesheet">
+  <link href="assets/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="assets/css/vuetify.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head> 
+<body>
+  <div id="root" v-cloak>
+    <v-app>
+      <v-card>
+        <v-app-bar color="#6A76AB" dark>
+          <v-app-bar-nav-icon @click="sidebar_toggle = true"></v-app-bar-nav-icon>
+          <v-toolbar-title>{{ title }}</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <!--<v-text-field v-show="search" placeholder="Поиск" solo clearable></v-text-field>-->
+          <v-btn @click="search = !search" icon>
+            <v-icon>mdi-magnify</v-icon>
+          </v-btn><v-menu
+        left
+        bottom
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item @click="() => {}">
+            <v-list-item-title>Помощь</v-list-item-title>
+          </v-list-item>
+          <v-list-item @click="() => {}">
+            <v-list-item-title>О нас</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+        </v-app-bar>
+        <v-navigation-drawer v-model="sidebar_toggle" absolute>
+          <v-list nav dense>
+            <v-list-item-group v-model="group" active-class="blue--text text--accent-4">
+              <v-list-item v-for="item in config.sidebar" @click="setTitle(item.item[1])">
+                <v-list-item-icon>
+                  <v-icon>{{ item.item[0] }}</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>
+                  {{ item.item[1] }}
+                </v-list-item-title>
+              </v-list-item>
+            </v-list-item-group>
+          </v-list>
+      </v-navigation-drawer>
+        <v-text-field v-show="search" v-model="search_text" clearable solo placeholder="Поиск" prepend-inner-icon="mdi-magnify"></v-text-field>
+        <p>{{ search_text }}</p>
+        <v-sheet id="scrolling-techniques-1" class="overflow-y-auto">
+          <v-container style="height: 1000px;">
+            <ul>
+              <a href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css">j</a>
+              <li v-for="item in 1000">Значение {{ item }}</li>
+            </ul>
+          </v-container>
+        </v-sheet>
+      </v-card>
+    </v-app>
+  </div>
+  
+  <!-- Всякие Vue-файлы -->
+  <script src="assets/js/vue.js"></script>
+  <script src="assets/js/vue-router.js"></script>
+  <script src="assets/js/vuetify.js"></script>
+  
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/templates.js"></script>
+</body>
+</html>
