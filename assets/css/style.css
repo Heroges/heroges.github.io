@@ -1,3 +1,3 @@
 [v-cloak] > *{display: none}
 [v-cloak]::before{content: "Загрузка..."}
-@font-face{font-family:"Material Design Icons";src:url("../fonts/materialdesignicons-webfont.ttf?v=4.9.95") format("truetype");font-weight:normal;font-style:normal}.mdi-menu::before{content:"\F35C"}
+@font-face{font-family:"Material Design Icons";src:url("../fonts/materialdesignicons-webfont.ttf?v=4.9.95") format("truetype");font-weight:normal;font-style:normal}.mdi-menu::before{content:"\F35C"}.mdi-plus-circle-outline::before{content:"\F419"}.mdi-view-list::before{content:"\F572"}.mdi-home::before{content:"\F2DC"}.mdi-dots-vertical::before{content:"\F1D9"}.mdi-magnify::before{content:"\F349"}
