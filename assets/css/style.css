@@ -1,3 +1,4 @@
 [v-cloak] > *{display: none}
 [v-cloak]::before{content: "Загрузка..."}
 @font-face{font-family:"Material Design Icons";src:url("../fonts/materialdesignicons-webfont.eot?v=4.9.95");src:url("../fonts/materialdesignicons-webfont.eot?#iefix&v=4.9.95") format("embedded-opentype"),url("../fonts/materialdesignicons-webfont.woff2?v=4.9.95") format("woff2"),url("../fonts/materialdesignicons-webfont.woff?v=4.9.95") format("woff"),url("../fonts/materialdesignicons-webfont.ttf?v=4.9.95") format("truetype");font-weight:normal;font-style:normal}.mdi:before,.mdi-set{display:inline-block;font:normal normal normal 24px/1 "Material Design Icons";font-size:inherit;text-rendering:auto;line-height:inherit;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.mdi-menu::before{content:"\F35C"}.mdi-magnify::before{content:"\F349"}.mdi-plus-circle-outline::before{content:"\F419"}.mdi-view-list::before{content:"\F572"}.mdi-dots-vertical::before{content:"\F1D9"}
