@@ -1,5 +1,3 @@
-const vuetify = new Vuetify()
-
 const app = new Vue({
 	el: "#root",
 	vuetify: new Vuetify(),
