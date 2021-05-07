@@ -16,19 +16,12 @@
           <v-app-bar-nav-icon @click="sidebar_toggle = true"></v-app-bar-nav-icon>
           <v-toolbar-title>{{ title }}</v-toolbar-title>
           <v-spacer></v-spacer>
-          <!--<v-text-field v-show="search" placeholder="Поиск" solo clearable></v-text-field>-->
           <v-btn @click="search = !search" icon>
             <v-icon>mdi-magnify</v-icon>
-          </v-btn><v-menu
-        left
-        bottom
-      >
+          </v-btn>
+          <v-menu left bottom >
         <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            icon
-            v-bind="attrs"
-            v-on="on"
-          >
+          <v-btn icon v-bind="attrs" v-on="on" >
             <v-icon>mdi-dots-vertical</v-icon>
           </v-btn>
         </template>
