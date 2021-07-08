@@ -47,10 +47,7 @@
   border-radius: 5px;
 }
 
-.input:hover, .input:active {
+.input:hover, .input:active, .input:focus {
   border: 1px solid #1E88E5;
-}
-
-.input:focus {
   box-shadow: 0 0 0px .2rem rgba(30, 136, 229, 0.4);
 }
