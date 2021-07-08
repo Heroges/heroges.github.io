@@ -13,7 +13,9 @@ class UiCheckbox extends HTMLElement {
 
 class UiInput extends HTMLElement {
     connectedCallback() {
-        
+        setTimeout(() => {
+            
+        });
     }
 }
 
