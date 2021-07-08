@@ -16,7 +16,7 @@ class UiInput extends HTMLElement {
     setTimeout(() => {
       this.innerHTML = ""
       let input = document.createElement("input")
-      input.classList.add("")
+      input.classList.add("input");
     })
   }
 }
