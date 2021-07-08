@@ -50,5 +50,5 @@
 
 .input:hover, .input:active, .input:focus {
   border: 1px solid #1E88E5;
-  box-shadow: 0 0 0px .1rem rgba(30, 136, 229, 0.4);
+  box-shadow: 0 0 0px 2px rgba(30, 136, 229, 0.4);
 }
