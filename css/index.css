@@ -44,10 +44,13 @@
 .input {
   outline: none;
   border: 1px solid #dfdfdf;
+  border-
 }
 
 .input:hover, .input:active {
   border: #1E88E5;
 }
 
-.input:focus {}
+.input:focus {
+  box-shadow: 0 0 0px .1rem rgba(30, 136, 229, 0.4);
+}
