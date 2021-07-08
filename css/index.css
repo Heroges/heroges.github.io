@@ -38,3 +38,8 @@
 	width: 20px;
 	color: #fff;
 }
+
+.input {
+  outline: none;
+  border: 1px solid ;
+}
