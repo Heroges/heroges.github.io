@@ -46,6 +46,7 @@
   border: 1px solid #dfdfdf;
   border-radius: 5px;
   padding: .3rem .4rem;
+  font-size: 1.5rem;
 }
 
 .input:hover, .input:active, .input:focus {
