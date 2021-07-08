@@ -17,6 +17,7 @@ class UiInput extends HTMLElement {
       this.innerHTML = ""
       let input = document.createElement("input")
       input.classList.add("input")
+      alert(this.attributes.placeholder.value)
       input.placeholder = this.attributes.placeholder.value || ""
       this.append(input)
     })
