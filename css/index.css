@@ -48,7 +48,7 @@
 }
 
 .input:hover, .input:active {
-  border: #1E88E5;
+  border: 1px solid #1E88E5;
 }
 
 .input:focus {
