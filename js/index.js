@@ -12,11 +12,9 @@ class UiCheckbox extends HTMLElement {
 }
 
 class UiInput extends HTMLElement {
-    connectedCallback() {
-        setTimeout(() => {
-            
-        });
-    }
+  connectedCallback() {
+    setTimeout(() => {});
+  }
 }
 
 customElements.define('ui-checkbox', UiCheckbox);
