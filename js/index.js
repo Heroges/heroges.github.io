@@ -19,5 +19,5 @@ class UiInput extends HTMLElement {
   }
 }
 
-customElements.define('ui-input', UiInput)
+customElements.define('ui-input', UiInput);
 customElements.define('ui-checkbox', UiCheckbox);
