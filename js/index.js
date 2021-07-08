@@ -18,7 +18,6 @@ class UiInput extends HTMLElement {
       let input = document.createElement("input")
       input.classList.add("input")
       this.append(input)
-      console.log(this)
     })
   }
 }
