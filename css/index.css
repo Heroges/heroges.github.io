@@ -35,6 +35,6 @@
 .checkbox .checkbox-span svg {
 	opacity: 0;
 	height: 20px;
-	with: 20px;
+	width: 20px;
 	color: #fff;
 }
