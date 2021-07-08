@@ -44,7 +44,7 @@
 .input {
   outline: none;
   border: 1px solid #dfdfdf;
-  border-
+  border-radius: 5px;
 }
 
 .input:hover, .input:active {
