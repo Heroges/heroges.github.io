@@ -15,7 +15,7 @@ class UiInput extends HTMLElement {
   connectedCallback() {
     setTimeout(() => {
       this.innerHTML = "lol"
-    });
+    })
   }
 }
 
