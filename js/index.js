@@ -14,7 +14,9 @@ class UiCheckbox extends HTMLElement {
 class UiInput extends HTMLElement {
   connectedCallback() {
     setTimeout(() => {
-      this.innerHTML = "lol"
+      this.innerHTML = ""
+      let input = document.createElement("input")
+      input.
     })
   }
 }
