@@ -1,27 +1,39 @@
-class UiCheckbox extends HTMLElement {
-  connectedCallback() {
-    setTimeout(() => {
-      this.innerHTML = ""
-      let label = document.createElement("label")
-      label.classList.add("checkbox")
-      this.append(label)
-      let labelName = this.children[0]
-      labelName.insertAdjacentHTML("afterbegin", "<input type='checkbox'><span class='checkbox-span'><svg xmlns='http:\/\/www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap=' stroke-linejoin=' stroke-width='2' d='M5 13l4 4L19 7' /></svg></span><span class='checkbox-text'>" + this.attributes.label.value + "</span>")
-    })
+function sidebar(status) {
+  let sidebar = document.getElementById("sidebar")
+  if(status === "close") {
+    sidebar.classList.remove("active")
+  } else if(status === "open") {
+    sidebar.classList.add("active")
+  } else if(!status) {
+    sidebar.classList.toggle("active")
   }
 }
 
-class UiInput extends HTMLElement {
-  connectedCallback() {
-    setTimeout(() => {
-      this.innerHTML = ""
-      let input = document.createElement("input")
-      input.classList.add("input")
-      input.placeholder = this.attributes.placeholder.value || ""
-      this.append(input)
-    })
-  }
+function search() {
+	let value = document.getElementById("search").value;
+	console.log(value)
 }
 
-customElements.define('ui-input', UiInput)
-customElements.define('ui-checkbox', UiCheckbox)
+document.addEventListener("touchstart", handleTouchStart)
+document.addEventListener("touchmove", handleTouchMove)
+
+let x1, y1
+
+function handleTouchStart(event) {
+  let touch = event.touches[0];
+  x1 = touch.screenX, y1 = touch.screenY
+}
+
+function handleTouchMove(event) {
+  if(!x1 || !y1) return;
+  let x2 = event.touches[0].screenX, y2 = event.touches[0].screenY
+  let x = x1 - x2, y = y1 - y2
+  if(Math.abs(x) > Math.abs(y)) {
+    if(x > 0) sidebar("close") //to left
+    else sidebar("open") // to right
+  }/* else {
+    if(y > 0) res = "Вверх" // to up
+    else res = "Вниз" // to down*
+  }*/
+  x1 = null, y1 = null
+}
